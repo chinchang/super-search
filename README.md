@@ -14,6 +14,8 @@ Demo
 
 [Visit my website](http://kushagragour.in/) and press '/' key.
 
+![Screenshot](/screenshot1.png)
+
 Installation
 -----
 
