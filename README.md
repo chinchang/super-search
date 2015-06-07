@@ -10,7 +10,7 @@ Installation
 
 Add `super-search.js` at the end of your blog HTML.
 
-If you want the styling for the search also, add `super-search.css` to your blog's `<head>` tag.
+If you want readymade styling for the search also, add `super-search.css` inside your blog's `<head>` tag.
 
 Usage
 -----
@@ -18,8 +18,8 @@ Usage
 Add markup for your search UI:
 
 ```html
-<div class="super-search" id="js-search">
-	<a href="javascript:void(0)" onclick="superSearch.toggleSearch()" class="super-search__close-btn">X</a>
+<div class="super-search" id="js-super-search">
+	<a href="javascript:void(0)" onclick="superSearch.toggle()" class="super-search__close-btn">X</a>
 	<input type="text" placeholder="Type here to search" class="super-search__input" id="js-super-search__input">
 	<ul class="super-search__results" id="js-super-search__results"></ul>
 </div>
@@ -30,8 +30,9 @@ And initialize `superSearch` as follows with optional parameters:
 ```js
 superSearch({
 	searchFile: '/feed/rss.xml',
-	inputSelector: '#js-search__input',
-	resultsSelector: '#js-search__results'
+	searchSelector: '#js-search' // CSS Selector for search container element.
+	inputSelector: '#js-search__input', // CSS selector for <input>
+	resultsSelector: '#js-search__results' // CSS selector for results container
 });
 
 ```

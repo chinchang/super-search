@@ -1,8 +1,8 @@
 (function () {
 	var searchFile = 'feed/rss.xml',
-		searchEl = document.querySelector('#js-search'),
-		searchInputEl = document.querySelector('#js-search__input'),
-		searchResultsEl = document.querySelector('#js-search__results'),
+		searchEl,
+		searchInputEl,
+		searchResultsEl,
 		currentInputValue = '',
 		lastSearchResultHash,
 		posts = [];
@@ -91,8 +91,9 @@
 
 	function init(options) {
 		searchFile = options.searchFile || searchFile;
-		searchInputEl = document.querySelector(options.inputSelector || 'super-search__input');
-		searchResultsEl = document.querySelector(options.resultsSelector || 'super-search__results');
+		searchEl = document.querySelector(options.searchSelector || '#js-super-search');
+		searchInputEl = document.querySelector(options.inputSelector || '#js-super-search__input');
+		searchResultsEl = document.querySelector(options.resultsSelector || '#js-super-search__results');
 
 		var xmlhttp=new XMLHttpRequest();
 		xmlhttp.open('GET', searchFile);
