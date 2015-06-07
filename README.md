@@ -9,6 +9,11 @@ I created this plugin to be used with a Jekyll blog. But it will work equally go
 
 - [RSS for Jekyll blog](http://joelglovier.com/writing/rss-for-jekyll/).
 
+Demo
+-----
+
+[Visit my website](http://kushagragour.in/) and press '/' key.
+
 Installation
 -----
 
