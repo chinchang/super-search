@@ -1,5 +1,5 @@
 (function () {
-	var searchFile = 'feed/rss.xml',
+	var searchFile = '/feed.xml',
 		searchEl,
 		searchInputEl,
 		searchResultsEl,

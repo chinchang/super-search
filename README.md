@@ -1,9 +1,13 @@
-super-search [![npm version](https://badge.fury.io/js/cta.svg)](http://badge.fury.io/js/cta)
+super-search
 =====
-*Add easy search to your blog*
+*Easy to add search for your blog*
 ***
 
-`super-search` adds search feature to your blog. All you need is an existing rss file for your website.
+`super-search` adds search feature to your blog. `super-search` works on your blog's RSS feeds to enable searching posts.
+
+I created this plugin to be used with a Jekyll blog. But it will work equally good with any blog having an RSS feed file. If you do not have one already, here are some easy ways to do it for your blog:
+
+- [RSS for Jekyll blog](http://joelglovier.com/writing/rss-for-jekyll/).
 
 Installation
 -----
@@ -29,7 +33,7 @@ And initialize `superSearch` as follows with optional parameters:
 
 ```js
 superSearch({
-	searchFile: '/feed/rss.xml',
+	searchFile: '/feed.xml',
 	searchSelector: '#js-search' // CSS Selector for search container element.
 	inputSelector: '#js-search__input', // CSS selector for <input>
 	resultsSelector: '#js-search__results' // CSS selector for results container
