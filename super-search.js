@@ -21,9 +21,10 @@ MIT Licensed
 		}
 
 		// do children
-		// If just one text node inside
-		if (xml.hasChildNodes() && xml.childNodes.length === 1 && xml.childNodes[0].nodeType === 3) {
-			obj = xml.childNodes[0].nodeValue;
+		// If all text nodes inside, get concatenated text from them.
+		var textNodes = [].slice.call(xml.childNodes).filter(function (node) { return node.nodeType === 3; });
+		if (xml.hasChildNodes() && xml.childNodes.length === textNodes.length) {
+			obj = [].slice.call(xml.childNodes).reduce(function (text, node) { return text + node.nodeValue; }, '');
 		}
 		else if (xml.hasChildNodes()) {
 			for(var i = 0; i < xml.childNodes.length; i++) {
