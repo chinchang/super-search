@@ -14,6 +14,8 @@ Demo
 
 [Visit my website](http://kushagragour.in/) and press '/' key.
 
+Or Checkout the `example.html` file in this repo. Remember to run it on http/https protocol.
+
 ![Screenshot](/screenshot1.png)
 
 Installation
