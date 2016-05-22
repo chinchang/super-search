@@ -43,7 +43,7 @@ And initialize `superSearch` as follows with optional parameters:
 ```js
 superSearch({
 	searchFile: '/feed.xml',
-	searchSelector: '#js-search' // CSS Selector for search container element.
+	searchSelector: '#js-search', // CSS Selector for search container element.
 	inputSelector: '#js-search__input', // CSS selector for <input>
 	resultsSelector: '#js-search__results' // CSS selector for results container
 });
