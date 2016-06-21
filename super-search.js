@@ -47,7 +47,14 @@ MIT Licensed
 
 	function getPostsFromXml(xml) {
 		var json = xmlToJson(xml);
-		return json.channel.item;
+		// Atom 1.0 format
+		if (json.entry && json.entry instanceof Array) {
+			return json.entry;
+		}
+		// Atom 2.0 format
+		else {
+			return json.channel.item;
+		}
 	}
 
 	window.toggleSearch = function toggleSearch() {
@@ -76,7 +83,8 @@ MIT Licensed
 		searchResultsEl.style.offsetWidth;
 
 		var matchingPosts = posts.filter(function (post) {
-			if ((post.title + '').toLowerCase().indexOf(currentInputValue) !== -1 || (post.description + '').toLowerCase().indexOf(currentInputValue) !== -1) {
+			// Search `description` and `content` both to support 1.0 and 2.0 formats.
+			if ((post.title + '').toLowerCase().indexOf(currentInputValue) !== -1 || ((post.description || post.content) + '').toLowerCase().indexOf(currentInputValue) !== -1) {
 				return true;
 			}
 		});
