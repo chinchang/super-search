@@ -7,7 +7,7 @@ super-search
 
 I created this plugin to be used with a Jekyll blog. But it will work equally good with any blog having an RSS feed file. If you do not have one already, here are some easy ways to do it for your blog:
 
-- [RSS for Jekyll blog](http://joelglovier.com/writing/rss-for-jekyll/).
+- [RSS for Jekyll blog](http://joelglovier.com/writing/rss-for-jekyll).
 
 Demo
 -----
